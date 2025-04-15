@@ -1,0 +1,71 @@
+%% yibin.sty
+%% Created by Yibin Liu
+%% All rights reserved. Unauthorized modification is prohibited.
+%% SHA256: abcdef1234567890abcdef...
+
+
+
+% 基础设置
+\usepackage[fontset=fandol]{ctex} % 中文支持
+\usepackage{listings} % 代码支持
+\usepackage{xcolor} % 颜色支持
+\usepackage{graphicx} % 图片支持
+\usepackage{amsmath, amssymb} % 数学公式支持
+\usepackage[colorlinks=false, linktoc=all, hidelinks]{hyperref} % 超链接支持
+\usepackage{caption} % 图表标题支持
+\usepackage{subcaption} % 子图支持
+\usepackage{float} % 控制图表浮动位置
+\usepackage{booktabs} % 表格支持
+\usepackage{geometry} % 页面布局
+\usepackage{algorithm} % 算法环境支持
+\usepackage{algpseudocode} % 算法伪代码支持
+\usepackage{array} % 增强的表格功能
+\usepackage{multirow} % 表格中的多行单元格
+\usepackage{siunitx} % 单位对齐，特别适合科学表格
+\usepackage{pgfplots} % 绘制图形
+\usepackage{tikz} % 绘制复杂图形
+\usepackage{diagbox} % 表格中的斜线表头
+\usepackage{adjustbox} % 调整图表大小
+\usepackage{mathtools} % 增强数学公式支持
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb} % For additional math symbols, if needed
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{fancyvrb} % 提供更多控制 verbatim 环境的功能
+\usepackage[most]{tcolorbox}
+
+% 定义一个新的 tcolorbox 环境来模拟 block
+\newtcolorbox[auto counter, number within=section]{myblock}[2][]{colframe=blue!50!black, colback=blue!10, 
+    coltitle=white, title=Block~\thetcbcounter: #2,#1}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % 清除原有页眉页脚
+\fancyhead[L]{\textcolor{gray}{\small This \LaTeX{} template was created by Yibin Liu}} 
+    
+\usetikzlibrary{positioning,3d,decorations.pathreplacing}
+\definecolor{darkgreen}{RGB}{0, 100, 0} % 自定义深绿色
+\geometry{left=3cm, right=3cm, top=2.5cm, bottom=2.5cm} % 页面边距设置
+
+
+% 代码块设置
+\lstset{
+    language=Matlab, % 默认代码语言
+    frame=single, % 显示代码框
+    basicstyle=\footnotesize\ttfamily, % 字体设置
+    keywordstyle=\color{blue}, % 关键词颜色
+    commentstyle=\color{darkgreen}, % 注释颜色（深绿色）
+    stringstyle=\color{red}, % 字符串颜色
+    numbers=left, % 显示行号
+    numberstyle=\tiny\color{gray}, % 行号样式
+    stepnumber=1, % 每行显示行号
+    breaklines=true, % 自动换行
+    captionpos=b, % 标题位置
+    tabsize=4, % 制表符宽度
+    showspaces=false, % 不显示空格
+    showstringspaces=false, % 不显示字符串中的空格
+    breakatwhitespace=false, % 只在空格处换行
+}
